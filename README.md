@@ -1,4 +1,4 @@
-# angular-18n
+# angular-i18n
 
 ## Introduction
 
