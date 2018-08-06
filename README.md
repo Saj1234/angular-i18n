@@ -1,4 +1,4 @@
-# angular--18n
+# angular-18n
 
 ## Introduction
 
@@ -10,6 +10,7 @@ if the keys cannot be found the custom resource file.
 Falling back to default resource file:
 
 $translateProvider.preferredLanguage('en-custom');
+
 $translateProvider.fallbackLanguage(['en']);
 
 
@@ -19,4 +20,5 @@ Install scripts:
 1. Run "npm install" from the root folder. - this will install the sever dependencies.
 2. Navigate to public folder and run "npm install" - this will install the client dependencies. 
 3. Run "node server" from root folder. - Start the server on port 3000
+
 Navigate to http://localhost:3000/
