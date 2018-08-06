@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+    <head>
+ 
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/node_modules/angular-dynamic-locale/tmhDynamicLocale.min.js"></script>
+        <script src="/node_modules/angular-translate/dist/angular-translate.min.js"></script>
+        <script src="/node_modules/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      </head>
+
+
+  <body>
+    <div ng-controller="translateController" style="padding: 20px;">
+
+        <div class="panel panel-default" >
+            <div class="panel-heading">Demo for i18n translator</div>
+            <div class="panel-body">
+                <h1>Strings</h1>
+                <h3><small>{{ 'Introduction' | translate }}</small></h3>
+                <h3><small>{{ 'Time' | translate }}</small></h3>
+                <h3><small>{{ 'Day' | translate }}</small></h3>
+                <h3><small>{{ 'Weather' | translate }}</small></h3>
+                <h1>Dates</h1>
+                <div>Date {{ dateValue | date }}</div>
+                
+                <h1>Numbers</h1>
+                <div>Population {{ population | number }}</div>
+                
+                <h1>Currency</h1>
+                <div>Salary {{ salary | currency }}</div>
+            </div>
+            
+          </div>
+      
+      <div>
+        <button ng-click="changeLanguage('en-custom')">Custom</button>
+        <button ng-click="changeLanguage('en')">English</button>
+        <button ng-click="changeLanguage('fr')">French</button>
+      </div>
+    </div>
+  </body>
+
+</html>
